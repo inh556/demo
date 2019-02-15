@@ -12,4 +12,4 @@ The last view below shows the unapproved devices. A person overseeing login secu
 
 > Piechart: demo/src/components/PieChart
 
-> The last list: demo/src/components/RiskLists && demo/src/components/RiskDetail
+> Risklist: demo/src/components/RiskLists && demo/src/components/RiskDetail
