@@ -1,0 +1,17 @@
+p {
+  margin: auto 5px
+}
+
+.content {
+  font-size: 18px;
+}
+
+.metadata {
+  color: #666666;
+  font-size: 13px;
+}
+
+a {
+  margin: auto 5px;
+  font-weight: bold
+}
