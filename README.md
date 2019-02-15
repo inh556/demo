@@ -6,9 +6,8 @@ The second view below displays an overview of device logins from the risk catego
 
 The last view below shows the unapproved devices. A person overseeing login security is able to approve or report unusual login situations. 
 
-Pathes to folder:
+### Pathes to folders:
 
-Google map: demo/public/googlemap.js
-Piechart: demo/src/components/PieChart
-The last list: demo/src/components/RiskLists
-               demo/src/components/RiskDetail
+> Google map: demo/public/googlemap.js
+> Piechart: demo/src/components/PieChart
+> The last list: demo/src/components/RiskLists && demo/src/components/RiskDetail
