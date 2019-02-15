@@ -9,5 +9,7 @@ The last view below shows the unapproved devices. A person overseeing login secu
 ### Pathes to folders:
 
 > Google map: demo/public/googlemap.js
+
 > Piechart: demo/src/components/PieChart
+
 > The last list: demo/src/components/RiskLists && demo/src/components/RiskDetail
