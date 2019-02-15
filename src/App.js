@@ -3,7 +3,6 @@ import './App.css';
 import users from './user.json'
 import ReactEcharts from 'echarts-for-react';
 import getUser from './userData';
-import Map from './componnets/map/Map'
 import RiskList from './componnets/RiskLists/RiskList';
 class App extends Component {
   constructor(props) {
