@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import users from './user.json'
-import ReactEcharts from 'echarts-for-react';
-import getUser from './userData';
+import getUser from './getUsersData';
 import RiskList from './componnets/RiskLists/RiskList';
+import PieChart from './componnets/PieChart/PieChart'
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      notSafeuser: null,
+      accountRisk: null,
       riskList: null,
       isLoading: true
     }
@@ -16,59 +17,19 @@ class App extends Component {
   componentDidMount() {
     const res = getUser(users)
     this.setState({
-      notSafeuser: res.mySet,
+      accountRisk: res.accoutRisk,
       riskList: res.highRiskList,
       isLoading: false
-    })
+    }, console.log(this.state.riskList))
   }
-  getOption() {
-    return {
-      title : {
-          text: '',
-          subtext: '',
-          x:'center'
-      },
-      tooltip : {
-          trigger: 'item',
-          formatter: "{a} <br/>{b} : {c} ({d}%)"
-      },
-      series : [
-          {
-              name: 'Source',
-              type: 'pie',
-              radius : '75%',
-              center: ['50%', '60%'],
-              data:[
-                {value:this.state.notSafeuser[0], name:'Safe',
-                  itemStyle: {color: 'green'},
-                },
-                {value:this.state.notSafeuser[1], name:'Suspicious',
-                itemStyle: {color: '#ff9900'},
-                },
-                {value:this.state.notSafeuser[2], name:'Malicious',
-                itemStyle: {color: 'red'},
-                },
-              ],
-              itemStyle: {
-                  emphasis: {
-                      shadowBlur: 10,
-                      shadowOffsetX: 0,
-                      shadowColor: 'rgba(0, 0, 0, 0.5)'
-                  }
-              }
-          }
-      ]
-  };
-  
-  }
+ 
   render() {
     if (this.state.isLoading) {
       return <p>Loading...</p>;
     } 
     return (
       <div className="container" >
-        {/* <Map /> */}
-        <ReactEcharts option={this.getOption()} />
+        <PieChart accountRisk={this.state.accountRisk}/>
         <RiskList riskList={this.state.riskList}/>
       </div>
     );

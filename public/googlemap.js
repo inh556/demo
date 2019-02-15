@@ -1,5 +1,3 @@
-
-
 function initMap() {
   var myLatLng = {lat: 0, lng: -92.1419};
 
@@ -23,5 +21,4 @@ function initMap() {
     markers.push(marker);
     }
   });
- var markerCluster = new MarkerClusterer(map, markers);
 }

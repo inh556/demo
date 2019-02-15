@@ -11,19 +11,19 @@ function getDetail(user) {
 }
 
 export default function getUsers(users) {
-  let mySet = [0, 0,0]
+  let accoutRisk = [0, 0,0]
   let highRiskList = [];
   for(let user of users) {
     const risk = user.risk;
     if(risk < 0.6 ) {
-      mySet[0] += 1;
+      accoutRisk[0] += 1;
     } else if (risk >= 0.6 && risk <0.9) {
-      mySet[1] += 1;
+      accoutRisk[1] += 1;
     } else {
       highRiskList.push(getDetail(user))
-      mySet[2] += 1;
+      accoutRisk[2] += 1;
     }
   }
-  return {mySet, highRiskList}
+  return {accoutRisk, highRiskList}
 }
 

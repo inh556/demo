@@ -1,6 +1,7 @@
 import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup'
 import './RiskDetail.css'
+
 class RiskDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -13,8 +14,8 @@ class RiskDetail extends React.Component {
     return (
       <ListGroup.Item as="li" style={{display: 'flex',justifyContent: 'space-between',}}>
           <div>
-            <p class = "content"><b>{this.props.risk.Shortname}</b></p>
-            <p class = "metadata"><b>State:</b> {this.props.risk.State}, <b>Last_seen:</b> {this.props.risk.Last_seen} </p>
+            <p className = "content"><b>{this.props.risk.Shortname}</b></p>
+            <p className = "metadata"><b>State:</b> {this.props.risk.State}, <b>Last_seen:</b> {this.props.risk.Last_seen} </p>
           </div>
          <div className="action"><a href='#'>Approve</a><a href='#'>Report</a></div>
       </ListGroup.Item>
